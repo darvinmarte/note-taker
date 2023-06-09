@@ -1,33 +1,37 @@
 # Note Taker
-  ![MIT license](https://img.shields.io/badge/license-MIT-blue)
 
-  ## Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributions](#contributions)
-  - [License](#license)
+![MIT license](https://img.shields.io/badge/license-MIT-blue)
 
-  ## Description
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [License](#license)
+
+## Description
+
 - An app designed for small business owners to be able to write and save notes so they can can organize their thoughts and keep track of tasks that need to be completed.
 
+## Installation
 
-  ## Installation
-  - NODE JS, NPM, Express
+- NODE JS, NPM, Express
 
-  ## Usage
+## Usage
+
 The link to the application is provided below.
 
+## Contributions
 
-  ## Contributions
-  N/A
+N/A
 
-  ## Tests 
+## Tests
 
-  ## Questions
+## Questions
 
-  If you would like to reach me email me at darvinmarte13@gmail.com and check out my github github.com/darvinmarte.
+If you would like to reach me email me at darvinmarte13@gmail.com and check out my github github.com/darvinmarte.
 
-  ## License
-    
-    This application was licensed under MIT license.
+## License
+
+ This application was licensed under MIT license.
