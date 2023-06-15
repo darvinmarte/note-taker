@@ -2,11 +2,13 @@ const express = require('express')
 const app = express();
 const path = require('path')
 const fs = require('fs')
+// npm package to create id to be able to delete
 const uuidv1 = require('uuid/v1')
-// const db = require('./db/db.json');
 const { dirname } = require('path');
+// to be able to deply to heroku
 PORT = process.env.PORT || 3000
 
+//Middleware
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -42,7 +44,9 @@ app.post('/api/notes', (req, res) => {
             const notes = JSON.parse(data)
             console.log(notes)
             const newNote = req.body
+            //adding ID to note to be able to delete
             newNote.id = uuidv1()
+            //pushing note to left colum to save
             notes.push(newNote)
             fs.writeFile(path.join(__dirname, '/db/db.json'), JSON.stringify(notes), 'utf-8', (err) => {
                 if (err) {
@@ -56,6 +60,7 @@ app.post('/api/notes', (req, res) => {
     })
 });
 
+//added is param to notes
 app.delete('/api/notes/:id', (req, res) => {
 const noteId = req.params.id
 fs.readFile(path.join(__dirname, '/db/db.json'), 'utf-8', (err, data) => {
@@ -68,6 +73,7 @@ fs.readFile(path.join(__dirname, '/db/db.json'), 'utf-8', (err, data) => {
         if(noteIndex === -1){
             res.status(400).json({error: 'Failed to read note'})
         } else{
+            //moving note index to top of list
             notes.splice(noteIndex, 1)
             fs.writeFile(path.join(__dirname, '/db/db.json'), JSON.stringify(notes), 'utf-8', (error) => {
                 if (error){
