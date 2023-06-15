@@ -5,7 +5,7 @@ const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 // const db = require('./db/db.json');
 const { dirname } = require('path');
-PORT = 3000
+PORT = process.env.PORT || 3000
 
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
