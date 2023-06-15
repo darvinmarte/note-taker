@@ -16,11 +16,12 @@
 
 ## Installation
 
-- NODE JS, NPM, Express
+- Latest versions of NODE JS, NPM, Express. 
 
 ## Usage
 
-The link to the application is provided below.
+This applciation was deployed with Heroku. The link to the application is provided below.
+
 
 ## Contributions
 
